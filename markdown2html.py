@@ -1,10 +1,24 @@
 #!/usr/bin/python3
 """
-Script to convert a Markdown file to HTML.
+Script to convert a Markdown file to HTML, including heading parsing.
 """
 
 import sys
 import os
+
+def parse_line(line):
+    """
+    Parse a single line of Markdown and convert it to HTML.
+    Handles heading syntax from # to ######.
+    """
+    # Check for heading syntax (up to 6 levels)
+    if line.startswith('#'):
+        heading_level = len(line.split(' ')[0])  # Count the number of '#'
+        if 1 <= heading_level <= 6:
+            content = line[heading_level:].strip()  # Extract heading content
+            return f"<h{heading_level}>{content}</h{heading_level}>"
+    # Default: wrap content in a paragraph
+    return f"<p>{line.strip()}</p>"
 
 if __name__ == "__main__":
     # Check if the correct number of arguments is provided
@@ -20,16 +34,16 @@ if __name__ == "__main__":
         print(f"Missing {markdown_file}", file=sys.stderr)
         sys.exit(1)
 
-    # Read the Markdown file
+    # Read the Markdown file and convert content
     try:
         with open(markdown_file, 'r') as md:
-            content = md.read()
+            lines = md.readlines()
     except Exception as e:
         print(f"Error reading {markdown_file}: {e}", file=sys.stderr)
         sys.exit(1)
 
-    # Convert Markdown to simple HTML (for now, just a paragraph)
-    html_content = f"<p>{content.strip()}</p>"
+    # Convert each line to HTML
+    html_content = "\n".join(parse_line(line) for line in lines)
 
     # Write the HTML content to the output file
     try:
@@ -41,3 +55,4 @@ if __name__ == "__main__":
 
     # Exit successfully
     sys.exit(0)
+
