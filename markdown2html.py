@@ -1,24 +1,50 @@
 #!/usr/bin/python3
 """
-Script to convert a Markdown file to HTML, including heading parsing.
+Script to convert a Markdown file to HTML, including headings and unordered lists.
 """
 
 import sys
 import os
 
-def parse_line(line):
+def parse_lines(lines):
     """
-    Parse a single line of Markdown and convert it to HTML.
-    Handles heading syntax from # to ######.
+    Parse the lines of Markdown and convert them to HTML.
+    Handles headings and unordered lists.
     """
-    # Check for heading syntax (up to 6 levels)
-    if line.startswith('#'):
-        heading_level = len(line.split(' ')[0])  # Count the number of '#'
-        if 1 <= heading_level <= 6:
+    html_lines = []
+    in_list = False  # Track if we are inside an <ul> block
+
+    for line in lines:
+        line = line.strip()  # Remove leading/trailing whitespace
+
+        # Check for heading syntax (up to 6 levels)
+        if line.startswith('#'):
+            heading_level = len(line.split(' ')[0])  # Count the number of '#'
             content = line[heading_level:].strip()  # Extract heading content
-            return f"<h{heading_level}>{content}</h{heading_level}>"
-    # Default: wrap content in a paragraph
-    return f"<p>{line.strip()}</p>"
+            html_lines.append(f"<h{heading_level}>{content}</h{heading_level}>")
+
+        # Check for unordered list item
+        elif line.startswith('- '):
+            if not in_list:
+                html_lines.append("<ul>")  # Start a new <ul> block
+                in_list = True
+            content = line[2:].strip()  # Extract list item content
+            html_lines.append(f"<li>{content}</li>")
+
+        else:
+            # Close the <ul> block if we are currently inside one
+            if in_list:
+                html_lines.append("</ul>")
+                in_list = False
+            # Wrap non-heading, non-list lines in <p> tags
+            if line:
+                html_lines.append(f"<p>{line}</p>")
+
+    # Close any remaining <ul> block
+    if in_list:
+        html_lines.append("</ul>")
+
+    return "\n".join(html_lines)
 
 if __name__ == "__main__":
     # Check if the correct number of arguments is provided
@@ -34,7 +60,7 @@ if __name__ == "__main__":
         print(f"Missing {markdown_file}", file=sys.stderr)
         sys.exit(1)
 
-    # Read the Markdown file and convert content
+    # Read the Markdown file
     try:
         with open(markdown_file, 'r') as md:
             lines = md.readlines()
@@ -42,8 +68,8 @@ if __name__ == "__main__":
         print(f"Error reading {markdown_file}: {e}", file=sys.stderr)
         sys.exit(1)
 
-    # Convert each line to HTML
-    html_content = "\n".join(parse_line(line) for line in lines)
+    # Convert lines to HTML
+    html_content = parse_lines(lines)
 
     # Write the HTML content to the output file
     try:
