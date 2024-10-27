@@ -1,0 +1,41 @@
+/* Variables ============================= */
+:root {
+    --nav-item-margin: 0 0 0 2rem; /* Updated margin value */
+}
+
+/* Header section ============================= */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+}
+
+/* Navbar section ============================= */
+nav {
+    display: flex; /* Added flex display for the nav */
+}
+
+.nav-item {
+    /* Other existing styles for nav-item would go here */
+}
+
+.nav-item + .nav-item {
+    margin: var(--nav-item-margin); /* Moved margin declaration */
+}
+
+/* Other existing styles would go here */
+
+/* Section SERVICES ============================= */
+.section-services {
+    /* Your existing styles for the services section */
+}
+
+/* Section LATEST NEWS ============================= */
+.section-latest-news {
+    /* Your existing styles for the latest news section */
+}
+
+/* Card styles ============================= */
+.card {
+    /* Your existing card styles */
+}

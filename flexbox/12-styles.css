@@ -1,0 +1,100 @@
+/* Variables ============================= */
+:root {
+    --color-white: #ffffff; /* Add the variable for white color */
+    --nav-item-margin: 0 0 0 2rem;
+}
+
+/* Header section ============================= */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+}
+
+/* Section HERO (article) ============================= */
+.hero-article {
+    background-size: 150rem 100rem; /* Set background size */
+    background-position: 50% 0; /* Set background position */
+}
+
+/* Targeting the before pseudo-element of hero-article class */
+.hero-article::before {
+    content: ""; /* Empty content for pseudo-element */
+    background: rgba(0, 0, 0, 0.8); /* Background overlay */
+    position: absolute; /* Positioning */
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0; /* Ensure it's below other content */
+}
+
+/* Section-inner styles inside hero-article */
+.hero-article .section-inner {
+    text-align: center; /* Center align text */
+    align-items: center; /* Center align items */
+    min-height: 40vh; /* Minimum height */
+}
+
+/* Section-body styles inside hero-article */
+.hero-article .section-body {
+    position: relative; /* Position relative for stacking */
+    padding: 7rem 0 0; /* Padding adjustment */
+    z-index: 2; /* Ensure it's above the background overlay */
+}
+
+/* Main article ============================= */
+.main-article {
+    padding: 5rem 0; /* Padding for main article */
+}
+
+/* Post ============================= */
+.post {
+    display: flex; /* Flex display for the post section */
+}
+
+/* Post Content ============================= */
+.post-content {
+    width: 100%; /* Full width for post content */
+}
+
+/* Post Aside ============================= */
+.post-aside {
+    order: -1; /* Position aside before content */
+    min-width: 20%; /* Minimum width for aside */
+}
+
+/* Section SERVICES ============================= */
+.section-services {
+    /* Your existing styles for the services section */
+}
+
+/* Section ABOUT US ============================= */
+.section-about-us .col-1-3 {
+    align-self: center; /* Centering each column item */
+}
+
+/* Navbar section ============================= */
+nav {
+    display: flex; /* Added flex display for the nav */
+}
+
+.nav-item {
+    /* Other existing styles for nav-item would go here */
+}
+
+.nav-item + .nav-item {
+    margin: var(--nav-item-margin); /* Moved margin declaration */
+}
+
+/* Section LATEST NEWS ============================= */
+.section-latest-news {
+    /* Your existing styles for the latest news section */
+}
+
+/* Card styles ============================= */
+.card {
+    /* Your existing card styles */
+}
+
+/*** ARTICLE PAGE ***/

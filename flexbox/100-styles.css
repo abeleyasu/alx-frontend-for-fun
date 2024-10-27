@@ -1,0 +1,28 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Post Content Styles
+    ============================= */
+.post-content img {
+    width: 100%;
+    height: auto;
+}
+
+.post-content p:first-child {
+    font-size: var(--font-size-x-large);
+}
+
+.img-caption {
+    margin: 1rem 0;
+    padding: 0 .5rem;
+    font-size: var(--font-size-small);
+    color: var(--color-grey); /* Ensure the variable is defined */
+    text-align: center;
+}
+
+/* Add any additional styles as needed... */

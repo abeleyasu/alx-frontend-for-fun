@@ -1,0 +1,31 @@
+/* Variables ============================= */
+/* Removed unused variables
+header-logo-position
+header-logo-link-display
+header-logo-link-position
+header-logo-link-top
+header-logo-link-left
+*/
+
+/* Header section ============================= */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Other existing styles would go here */
+
+/* Section SERVICES ============================= */
+.section-services {
+    /* Your existing styles for the services section */
+}
+
+/* Section LATEST NEWS ============================= */
+.section-latest-news {
+    /* Your existing styles for the latest news section */
+}
+
+/* Card styles ============================= */
+.card {
+    /* Your existing card styles */
+}

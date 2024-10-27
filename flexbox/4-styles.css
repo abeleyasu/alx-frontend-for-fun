@@ -1,0 +1,71 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header, hero section, and other sections remain unchanged */
+
+/* Grid Section ============================= */
+
+/* Column for one-third width with updated spacing */
+.col-1-3 {
+  width: calc((100% / 3) - 2rem);
+}
+
+/* Column for one-half width with updated spacing */
+.col-1-2 {
+  width: calc((100% / 2) - 2rem);
+}
+
+/* Applying margin for flex grid items instead of padding */
+[class*='col-'] {
+  margin: 1rem;
+}
+
+/* Updating ul.row to adjust for margin spacing */
+ul.row {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: -1rem; /* Offsets the margin applied to individual .col-* items */
+}
+
+/* Section SERVICES ============================= */
+.section-services .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-services ul {
+  list-style: none;
+}
+
+.section-services ul li {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  width: calc((100% / 3) - 2rem); /* Adjust width as needed */
+}
+
+/* 4. CARD ============================= */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}

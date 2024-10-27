@@ -1,0 +1,48 @@
+/* General Styles */
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full height of viewport */
+    display: flex; /* Enable flexbox on the body */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Container Styles */
+.container {
+    display: flex; /* Enable flex on container */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    width: 80vw; /* Set a specific width for the container */
+    height: 80vh; /* Set a specific height for the container */
+}
+
+/* Box Styles */
+.box {
+    flex: 1 1 calc(20% - 10px); /* Set flex basis to 20% minus space */
+    height: 30%; /* Set a fixed height for boxes */
+    display: flex; /* Enable flex on box */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    font-size: 1.5rem; /* Increase font size for visibility */
+    color: white; /* Set text color */
+}
+
+/* Individual Box Colors */
+.box1 {
+    background-color: #FF5733; /* Custom color for box 1 */
+}
+
+.box2 {
+    background-color: #33FF57; /* Custom color for box 2 */
+}
+
+.box3 {
+    background-color: #3357FF; /* Custom color for box 3 */
+}
+
+.box4 {
+    background-color: #F1C40F; /* Custom color for box 4 */
+}
+
+.box5 {
+    background-color: #8E44AD; /* Custom color for box 5 */
+}

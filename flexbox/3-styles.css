@@ -1,0 +1,46 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header, hero section, and other sections remain unchanged */
+
+/* Section SERVICES ============================= */
+.section-services .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-services ul {
+  list-style: none;
+}
+
+.section-services ul li {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  width: calc(33.33% - 20px); /* Adjust width as needed */
+}
+
+/* 4. CARD ============================= */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}

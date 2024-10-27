@@ -1,0 +1,122 @@
+/* Variables ============================= */
+:root {
+    --color-primary: #3498db; /* Primary color for strong tags */
+    --font-size-small: 0.875rem; /* Small font size */
+    --color-light-grey: #d3d3d3; /* Light grey for borders */
+}
+
+/* Header section ============================= */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+}
+
+/* Section HERO (article) ============================= */
+.hero-article {
+    background-size: 150rem 100rem; /* Set background size */
+    background-position: 50% 0; /* Set background position */
+}
+
+/* Targeting the before pseudo-element of hero-article class */
+.hero-article::before {
+    content: ""; /* Empty content for pseudo-element */
+    background: rgba(0, 0, 0, 0.8); /* Background overlay */
+    position: absolute; /* Positioning */
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0; /* Ensure it's below other content */
+}
+
+/* Section-inner styles inside hero-article */
+.hero-article .section-inner {
+    text-align: center; /* Center align text */
+    align-items: center; /* Center align items */
+    min-height: 40vh; /* Minimum height */
+}
+
+/* Main article ============================= */
+.main-article {
+    padding: 5rem 0; /* Padding for main article */
+}
+
+/* Post ============================= */
+.post {
+    display: flex; /* Flex display for the post section */
+}
+
+/* Post Content ============================= */
+.post-content {
+    width: 100%; /* Full width for post content */
+}
+
+/* Post Aside ============================= */
+.post-aside {
+    order: -1; /* Position aside before content */
+    min-width: 20%; /* Minimum width for aside */
+}
+
+/* Post Meta ============================= */
+.post-meta-list {
+    flex-direction: column; /* Arrange items in a column */
+}
+
+/* Targeting the strong tag inside post-meta-list class */
+.post-meta-list strong {
+    color: var(--color-primary); /* Color for strong tags */
+    font-size: var(--font-size-small); /* Small font size */
+    text-transform: uppercase; /* Uppercase transformation */
+    display: block; /* Display as block for spacing */
+}
+
+/* Target all classes that start with post-meta- inside post-meta-list class */
+.post-meta-list li[class^="post-meta-"] {
+    margin-bottom: 1rem; /* Bottom margin */
+    padding-bottom: 1rem; /* Padding */
+    border-bottom: 0.2rem solid var(--color-light-grey); /* Bottom border */
+}
+
+/* Target the last child of all classes that start with post-meta inside post-meta-list class */
+.post-meta-list li[class^="post-meta-"]:last-child {
+    border: none; /* No border */
+    margin-bottom: 3rem; /* Increased margin */
+}
+
+/* Tag list ============================= */
+.tag-list {
+    padding: 0; /* No padding */
+    list-style: none; /* No list style */
+}
+
+.tag-list li {
+    display: inline; /* Inline display for tags */
+}
+
+/* After pseudo-element on the li inside tag-list class */
+.tag-list li::after {
+    content: ", "; /* Comma after each item */
+}
+
+/* After pseudo-element of the last-child on the li inside tag-list class */
+.tag-list li:last-child::after {
+    content: ""; /* No comma after the last item */
+}
+
+/* Section SERVICES ============================= */
+nav {
+    display: flex; /* Added flex display for the nav */
+}
+
+/* Other existing styles would go here */
+
+/* Section LATEST NEWS ============================= */
+.section-latest-news {
+    /* Your existing styles for the latest news section */
+}
+
+/* Card styles ============================= */
+.card {
+    /* Your existing card styles */
+}
