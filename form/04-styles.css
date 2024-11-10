@@ -1,0 +1,57 @@
+/* Targeting all labels to apply the same styles */
+label {
+  cursor: pointer; /* Makes the label clickable */
+  display: block;   /* Makes the label a block element */
+  white-space: nowrap; /* Ensures label text does not wrap */
+  font-size: 1.4rem; /* Font size for the labels */
+  padding: 0 0 0.5rem; /* Padding on the bottom of the label */
+}
+
+/* Targeting input fields (text and email) and textarea */
+input[type="text"], 
+input[type="email"], 
+textarea {
+  position: relative; /* Position relative */
+  width: 100%; /* Full width */
+  padding: 1.2rem; /* Padding inside the input/textarea */
+  line-height: 1; /* Ensures consistent line height */
+  border: .1rem solid var(--color-black); /* Border color */
+  background-color: var(--color-white); /* Background color */
+  box-shadow: none; /* Remove shadow */
+  outline: 0; /* Remove outline */
+}
+
+/* Right padding for text and email input fields */
+input[type="text"], 
+input[type="email"] {
+  padding-right: 3rem; /* Right padding */
+}
+
+/* Focus state for text, email, and textarea fields */
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+textarea:focus {
+  border: .1rem solid var(--color-grey); /* Border color on focus */
+  background-color: var(--color-light-grey); /* Background color on focus */
+}
+
+/* Placeholder styling */
+::placeholder {
+  font-style: italic; /* Italicize placeholder */
+  font-size: var(--font-size-small); /* Small font size for placeholder */
+}
+
+/* Add additional styles for the button */
+button.button-primary {
+  background-color: #007bff; /* Primary button background color */
+  color: white; /* Text color of button */
+  padding: 0.8rem 2rem; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 0.3rem; /* Rounded button */
+  font-size: 1.2rem; /* Button text size */
+  cursor: pointer; /* Make button clickable */
+}
+
+button.button-primary:hover {
+  background-color: #0056b3; /* Darker color when hovering */
+}

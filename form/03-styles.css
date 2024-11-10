@@ -1,0 +1,43 @@
+/* Targeting all labels to apply the same styles */
+label {
+  cursor: pointer; /* Makes the label clickable */
+  display: block;   /* Makes the label a block element */
+  white-space: nowrap; /* Ensures label text does not wrap */
+  font-size: 1.4rem; /* Font size for the labels */
+  padding: 0 0 0.5rem; /* Padding on the bottom of the label */
+}
+
+/* Additional styles for the form groups, form fields, and form-field containers */
+.form-group {
+  margin-bottom: 1rem; /* Space between each form group */
+}
+
+.form-field {
+  margin-top: 0.5rem; /* Space above the input fields */
+}
+
+.form-field-container {
+  display: block; /* Make the container a block element */
+  width: 100%; /* Make the input fields take up full width of their container */
+}
+
+input, textarea {
+  width: 100%; /* Ensure inputs and textarea are full width */
+  padding: 0.5rem; /* Padding inside the input fields */
+  border-radius: 0.3rem; /* Slight rounding on input fields */
+  border: 1px solid #ccc; /* Light border for inputs */
+}
+
+button.button-primary {
+  background-color: #007bff; /* Primary button background color */
+  color: white; /* Text color of button */
+  padding: 0.8rem 2rem; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 0.3rem; /* Rounded button */
+  font-size: 1.2rem; /* Button text size */
+  cursor: pointer; /* Make button clickable */
+}
+
+button.button-primary:hover {
+  background-color: #0056b3; /* Darker color when hovering */
+}

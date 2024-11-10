@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Form</title>
+  <link rel="stylesheet" href="03-styles.css">
+</head>
+<body>
+
+  <form>
+    <!-- First Fieldset: Your Personal Information -->
+    <fieldset>
+      <legend class="visually-hidden">Your personal information</legend>
+      <!-- First div for first name -->
+      <div class="form-group col-1-2">
+        <label for="your-first-name">First Name</label>
+        <div class="form-field">
+          <span class="form-field-container">
+            <input type="text" id="your-first-name" name="your-first-name">
+          </span>
+        </div>
+      </div>
+      <!-- Second div for last name -->
+      <div class="form-group col-1-2">
+        <label for="your-last-name">Last Name</label>
+        <div class="form-field">
+          <span class="form-field-container">
+            <input type="text" id="your-last-name" name="your-last-name">
+          </span>
+        </div>
+      </div>
+      <!-- Third div for email -->
+      <div class="form-group col-2-3">
+        <label for="your-email">Email</label>
+        <div class="form-field">
+          <span class="form-field-container">
+            <input type="email" id="your-email" name="your-email">
+          </span>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Second Fieldset: Your Comment -->
+    <fieldset>
+      <legend class="visually-hidden">Your comment</legend>
+      <!-- First div for title -->
+      <div class="form-group col-2-3">
+        <label for="your-title">Title</label>
+        <div class="form-field">
+          <span class="form-field-container">
+            <input type="text" id="your-title" name="your-title">
+          </span>
+        </div>
+      </div>
+      <!-- Second div for comment -->
+      <div class="form-group col-2-3">
+        <label for="your-comment">Comment</label>
+        <div class="form-field">
+          <span class="form-field-container">
+            <textarea id="your-comment" name="your-comment"></textarea>
+          </span>
+        </div>
+      </div>
+      <!-- Third div for submit button -->
+      <div class="form-group">
+        <button class="button button-primary" type="submit">Post my comment</button>
+      </div>
+    </fieldset>
+  </form>
+
+</body>
+</html>
