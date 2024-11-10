@@ -1,0 +1,78 @@
+/* General reset and base styles */
+/* Resetting margins and padding to zero for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure that images and videos scale properly and don't overflow the container */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+  color: var(--text-color, #333);
+  margin: 0;
+  padding: 0;
+}
+
+/* Root variables for consistent styling */
+:root {
+  --color-primary: #3498db;
+  --color-secondary: #2ecc71;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey: #7f8c8d;
+  --text-color: #333333;
+  --background-color: #f4f4f4;
+  --color-dark-grey: #2c3e50;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Basic styles for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  color: var(--color-dark-grey);
+}
+
+/* Paragraph and text styles */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Container for general layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Flexbox utility class for centering */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
