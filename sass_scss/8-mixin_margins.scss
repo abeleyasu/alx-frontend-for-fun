@@ -1,0 +1,18 @@
+/* 8-mixin_margins.scss */
+/* This Sass file defines a mixin for setting left and right margins and applies it to body and div tags */
+
+/* Define the mixin for margin */
+@mixin margin-lr($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+/* Apply the mixin to body */
+body {
+  @include margin-lr(10px, 10px);
+}
+
+/* Apply the mixin to div */
+div {
+  @include margin-lr(15px, 15px);
+}

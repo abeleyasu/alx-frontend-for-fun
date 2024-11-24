@@ -1,0 +1,18 @@
+/* 9-extend_list.scss */
+/* This Sass file demonstrates the use of @extend for sharing styles among multiple classes */
+
+/* Define the base class */
+.info {
+  font-size: 12px;
+}
+
+/* Extend .info and apply additional styles */
+.success {
+  @extend .info;
+  color: #00FF00;
+}
+
+.warning {
+  @extend .info;
+  color: #FF0000;
+}

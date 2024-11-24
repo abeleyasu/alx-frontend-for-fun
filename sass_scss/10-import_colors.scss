@@ -1,0 +1,18 @@
+/* 10-import_colors.scss */
+/* This Sass file imports colors from 10-colors.scss and applies them to respective classes */
+
+/* Import colors from the external 10-colors.scss file */
+@import '10-colors';
+
+/* Assign the imported color variables to respective classes */
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}

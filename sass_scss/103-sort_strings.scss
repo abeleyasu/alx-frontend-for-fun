@@ -1,0 +1,10 @@
+/* 103-sort_strings.scss */
+
+/* Define the list of strings */
+$list_to_sort: john anna zoe kim felicia carrie;
+
+/* Sort the list */
+$sorted_list: sort($list_to_sort);
+
+/* Output the sorted list using @debug */
+@debug $sorted_list;

@@ -1,0 +1,18 @@
+/* 2-color_variables.scss */
+/* This Sass file assigns text and background colors using variables */
+
+$text-color: #3D3D3D;
+$background-color: #6D6D6D;
+
+body {
+  color: $text-color;
+  background-color: $background-color;
+}
+
+p {
+  color: $text-color;
+}
+
+h2 {
+  background-color: $background-color;
+}

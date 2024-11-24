@@ -1,0 +1,10 @@
+/* 6-nested_hover.scss */
+/* This Sass file styles button tags and changes their text color on hover */
+
+button {
+  color: #FF0000;
+
+  &:hover {
+    color: #00FF00;
+  }
+}

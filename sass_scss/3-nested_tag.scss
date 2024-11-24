@@ -1,0 +1,11 @@
+/* 3-nested_tag.scss */
+/* This Sass file uses nested declarations to style body and p tags */
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  p {
+    margin: 10px;
+  }
+}

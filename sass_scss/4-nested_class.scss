@@ -1,0 +1,10 @@
+/* 4-nested_class.scss */
+/* This Sass file uses nested declarations to style body and .red class elements */
+
+body {
+  color: #3D3D3D;
+
+  .red {
+    color: #FF0000;
+  }
+}

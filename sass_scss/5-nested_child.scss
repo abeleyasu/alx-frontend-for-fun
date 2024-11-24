@@ -1,0 +1,10 @@
+/* 5-nested_child.scss */
+/* This Sass file uses nested declarations to style body elements and direct child elements of class .red */
+
+body {
+  color: #3D3D3D;
+
+  > .red {
+    color: #FF0000;
+  }
+}

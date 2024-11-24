@@ -1,0 +1,9 @@
+/* 100-loop_col.scss */
+/* This Sass file creates col-1 to col-4 classes with widths based on their number */
+
+/* Loop from 1 to 4 to create .col-1, .col-2, .col-3, .col-4 with corresponding widths */
+@for $i from 1 through 4 {
+  .col-#{$i} {
+    width: 100% / $i;
+  }
+}

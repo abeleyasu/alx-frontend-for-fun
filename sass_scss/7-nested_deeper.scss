@@ -1,0 +1,14 @@
+/* 7-nested_deeper.scss */
+/* This Sass file sets font sizes for body tags, h1 tags inside body, and h1 tags with the .smaller class */
+
+body {
+  font-size: 14px;
+
+  h1 {
+    font-size: 16px;
+
+    &.smaller {
+      font-size: 12px;
+    }
+  }
+}
