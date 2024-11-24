@@ -1,0 +1,125 @@
+/* General reset for styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.menu {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+/* Hide the default checkbox */
+.menu-open {
+  display: none;
+}
+
+/* Main menu button styling */
+.menu-open-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #4caf50;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.menu-open-button:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Hamburger icon (3 lines) */
+.menu-line {
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.menu-line-1 {
+  top: 30%;
+}
+
+.menu-line-2 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-line-3 {
+  bottom: 30%;
+}
+
+/* Rotate hamburger to "X" when open */
+.menu-open:checked + .menu-open-button .menu-line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+  background-color: transparent;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu items styling */
+.menu-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Positioning menu items around the circle */
+.menu-item:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(0deg) translate(120px) rotate(0deg);
+}
+
+.menu-item:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(72deg) translate(120px) rotate(-72deg);
+}
+
+.menu-item:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(144deg) translate(120px) rotate(-144deg);
+}
+
+.menu-item:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(216deg) translate(120px) rotate(-216deg);
+}
+
+.menu-item:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(288deg) translate(120px) rotate(-288deg);
+}
+
+/* Reveal menu items when menu is open */
+.menu-open:checked ~ .menu-item {
+  transform: scale(1);
+  opacity: 1;
+}
